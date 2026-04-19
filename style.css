@@ -1,0 +1,259 @@
+.container{
+  background: rgba(61, 61, 58, 0.762);
+  /* background-image: url(download\ \(1\).jpg); */
+  border-radius: 16px;
+  padding: 32px 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+}
+/* .top-container{
+    background-color: #d6a771;
+    width: 500px;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+/* } */ 
+.category-area {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+
+.cat-label {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.cat-btn {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 2px solid #2c3e50;
+    border-radius: 20px;
+    background: white;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+.cat-btn.active {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Hide category when extreme mode */
+.category-area.hidden {
+    display: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    /* background: radial-gradient(rgba(184, 232, 228, 0.423),rgba(181, 225, 134, 0.571)); */
+    background-image: url(download\ \(4\).jpg);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 10px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #cd1036;
+    margin-bottom: 6px;
+}
+
+p.subtitle {
+    color: #fff1f1;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+}
+
+/* Hangman Drawing */
+canvas {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    margin-bottom: 20px;
+    margin-top: 2em;
+}
+
+/* Wrong guesses */
+.wrong-count {
+    font-size: 1rem;
+    color: #e74c3c;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+/* Word blanks */
+.word-display {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.letter-box {
+    width: 36px;
+    height: 44px;
+    border-bottom: 3px solid #7eaddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6da0d4;
+    text-transform: uppercase;
+}
+
+/* Alphabet buttons */
+.alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    max-width: 420px;
+    margin-bottom: 24px;
+    background-color: rgb(100, 97, 62);
+    border-radius: 20px;
+}
+
+.alphabet button {
+    margin: 0.5em;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    color: #2c3e50;
+    transition: background 0.15s, color 0.15s;
+}
+
+.alphabet button:hover:not(:disabled) {
+    background: #2c3e50;
+    color: white;
+}
+
+.alphabet button:disabled {
+    background: #ddd;
+    color: #aaa;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+
+.alphabet button.correct {
+    background: #27ae60;
+    color: white;
+    border-color: #27ae60;
+}
+
+.alphabet button.wrong {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+/* Message */
+.message {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #2c3e50;
+    min-height: 32px;
+    text-align: center;
+}
+
+.message.win {
+    color: #27ae60;
+}
+
+.message.lose {
+    color: #e74c3c;
+}
+
+/* Play Again button */
+#play-again-btn {
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+#play-again-btn:hover {
+    background: #1a252f;
+}
+
+.difficulty {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.diff-btn {
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  background: white;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.diff-btn.active {
+  background: #2c3e50;
+  color: white;
+}
+.game-area {
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+/* Phone - stack vertically */
+@media (max-width: 600px) {
+  .game-area {
+    flex-direction: column;
+    align-items: center;
+  }
+}

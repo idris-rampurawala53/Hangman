@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚔️ HANGMAN CHALLENGE</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-container">
+
+            <h1 class="title">🪢 Hangman</h1>
+            <p class="subtitle">Guess the word before the man is hanged!</p>
+            <div class="difficulty">
+                <button id="btn-normal" class="diff-btn active" onclick="setDifficulty('normal')"> Normal</button>
+                <button id="btn-extreme" class="diff-btn" onclick="setDifficulty('extreme')">🔥 Extreme</button>
+            </div>
+        </div>
+        <div class="category-area" id="category-area">
+            <p class="cat-label">Pick a category:</p>
+            <div class="categories">
+                <button class="cat-btn active" onclick="setCategory('all',this)">🎲 All</button>
+                <button class="cat-btn" onclick="setCategory('fruits',this)">🍎 Fruits</button>
+                <button class="cat-btn" onclick="setCategory('animals',this)">🐘 Animals</button>
+                <button class="cat-btn" onclick="setCategory('tech',this)">💻 Tech</button>
+                <button class="cat-btn" onclick="setCategory('nature',this)">🌿 Nature</button>
+                <button class="cat-btn" onclick="setCategory('music',this)">🎵 Music</button>
+                <button class="cat-btn" onclick="setCategory('sports',this)">⚽ Sports</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="left-side">
+
+                <canvas id="hangman-canvas" width="200" height="220"></canvas>
+
+                <div class="wrong-count">Wrong guesses: <span id="wrong-count">0</span> / 6</div>
+
+                <div class="word-display" id="word-display"></div>
+            </div>
+            <div class="right-side">
+
+                <div class="alphabet" id="alphabet"></div>
+
+                <div class="message" id="message"></div>
+
+                <button id="play-again-btn" onclick="startGame()">🔄 Play Again</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
